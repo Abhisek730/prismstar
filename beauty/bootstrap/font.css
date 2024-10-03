@@ -1,0 +1,109 @@
+/* Importing Fonts */
+@font-face {
+    font-family: 'SakkalMajalla';
+    src: url('../../assets/font/majalla.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'SakkalMajallaBold';
+    src: url('../../assets/font/majallab.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'RoundkeyExtraLightOblique';
+    src: url('../../assets/font/Roundkey\ ExtraLightOblique.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'EurostileExtendedTwo';
+    src: url('../../assets/font/EUROSTILE-EXTENDEDTWO.OTF') format('opentype');
+}
+
+/* Global Styling */
+body {
+    font-family: 'SakkalMajalla', sans-serif; /* Body font */
+    font-size: 1.5rem; /* Base font size (Bootstrap's default is 1rem) */
+    color: #333; /* Dark grey text color */
+    line-height: 1.5; /* Improved readability */
+}
+
+/* Headings */
+h1, h2, h3 {
+    font-family: 'SakkalMajallaBold', sans-serif; /* Bold font for headings */
+    color: #111; /* Darker color for contrast */
+}
+
+h1 {
+    font-size: 2.5rem; /* Bootstrap's h1 */
+}
+
+h2 {
+    font-size: 2rem; /* Bootstrap's h2 */
+}
+
+h3 {
+    font-size: 1.75rem; /* Bootstrap's h3 */
+}
+
+/* Navigation Menu */
+.nav-link {
+    font-family: 'SakkalMajalla', sans-serif; /* Font for nav links */
+    
+}
+
+.nav-link:hover {
+    text-decoration: underline; /* Underline effect on hover */
+}
+
+/* Button Styling */
+.btn-custom {
+    font-family: 'RoundkeyExtraLightOblique', sans-serif; /* Custom font for buttons */
+    font-size: 1rem; /* Base size */
+    padding: 10px 20px; /* Padding around button */
+    background-color: #28a745; /* Bootstrap's success color */
+    color: #fff; /* White text color */
+    border: none; /* No border */
+    cursor: pointer; /* Pointer cursor */
+}
+
+.btn-custom:hover {
+    background-color: #218838; /* Darker shade on hover */
+}
+
+/* Hero Section (Main Titles) */
+.hero-title {
+    font-family: 'EurostileExtendedTwo', sans-serif; /* Font for hero title */
+    font-size: 3rem; /* Larger size for emphasis */
+    color: #000; /* Black color */
+    text-transform: uppercase; /* Uppercase text */
+    letter-spacing: 1.5px; /* Spacing between letters */
+    text-align: center; /* Centered alignment */
+}
+
+/* Footer Headers */
+.footer h4 {
+    font-family: 'EurostileExtendedTwo', sans-serif; /* Font for footer headers */
+    font-size: 1.25rem; /* Medium size */
+    color: #555; /* Grey color */
+}
+
+/* Quotes or Accents */
+blockquote {
+    font-family: 'RoundkeyExtraLightOblique', sans-serif; /* Font for quotes */
+    font-size: 1.5rem; /* Larger size */
+    font-style: italic; /* Italic text */
+    margin: 20px 0; /* Vertical margin */
+    color: #555; /* Grey color */
+    border-left: 5px solid #ccc; /* Left border */
+    padding-left: 15px; /* Padding on left */
+}
+
+/* Call-to-Action Section */
+.cta-section {
+    font-family: 'SakkalMajallaBold', sans-serif; /* Bold font for CTA */
+    font-size: 1.75rem; /* Larger size */
+    text-align: center; /* Centered text */
+    color: #fff; /* White text */
+    background-color: #007bff; /* Bootstrap primary color */
+    padding: 20px; /* Padding around section */
+}
