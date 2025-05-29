@@ -1,975 +1,833 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Prism Star Reality</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link
-      rel="stylesheet"
-      href="./beauty/bootstrap/bootstrap-dg-site-theme.css"
-    />
-    <style>
-      a {
-        text-decoration: none;
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Prism Star Reality</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./beauty/bootstrap/bootstrap-dg-site-theme.css" />
+  <style>
+    a {
+      text-decoration: none;
+    }
+
+    /* Add this CSS to your existing stylesheet */
+    /* Ensure logos are displayed horizontally and continuously scroll */
+    .logo-wrapper {
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    .logo-container {
+      display: flex;
+      animation: scroll-left 60s linear infinite;
+    }
+
+    .logo-container>div {
+      flex: 0 0 auto;
+    }
+
+    @keyframes scroll-left {
+      0% {
+        transform: translateX(10%);
       }
 
-      /* Add this CSS to your existing stylesheet */
-      /* Ensure logos are displayed horizontally and continuously scroll */
-      .logo-wrapper {
-        overflow: hidden;
-        white-space: nowrap;
+      100% {
+        transform: translateX(-600%);
       }
+    }
 
-      .logo-container {
+    @media (max-width: 991px) {
+      .fixing_the_widthing {
+        padding-bottom: 10%;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .slidermakingforthis {
         display: flex;
-        animation: scroll-left 60s linear infinite;
+        flex-direction: column;
+        margin-bottom: 6%;
       }
 
-      .logo-container > div {
-        flex: 0 0 auto;
+      .makin_margin_tagiload {
+        margin-top: 1%;
       }
 
-      @keyframes scroll-left {
-        0% {
-          transform: translateX(10%);
-        }
+      .fixing_the_widthing {
+        padding-bottom: 0;
+        margin-bottom: 4%;
+      }
+    }
 
-        100% {
-          transform: translateX(-600%);
-        }
+    @media (max-width: 550px) {
+      .fixing_the_widthing {
+        padding-bottom: 0;
+      }
+    }
+
+    @media (max-width: 489px) {
+      .now_this_wants_paddings {
+        padding-bottom: 15%;
+      }
+    }
+
+    @media (max-width: 460px) {
+      .now_this_wants_paddings {
+        padding-bottom: 32%;
+      }
+    }
+
+    @media (max-width: 400px) {
+      .now_this_wants_paddings {
+        padding-bottom: 15%;
+      }
+    }
+
+    @media (max-width: 398px) {
+      .now_this_wants_paddings {
+        padding-bottom: 0;
+      }
+    }
+
+    @media (max-width: 425px) {
+      .givingRowingThis {
+        display: flex;
+        flex-direction: column;
       }
 
-      @media (max-width: 991px) {
-        .fixing_the_widthing {
-          padding-bottom: 10%;
-        }
+      .now_this_wants_paddings {
+        padding-bottom: 0;
       }
+    }
 
-      @media (max-width: 767px) {
-        .slidermakingforthis {
-          display: flex;
-          flex-direction: column;
-          margin-bottom: 6%;
-        }
+    /* Ensure steps are connected by lines */
+    .process-step-box {
+      position: relative;
+    }
 
-        .makin_margin_tagiload {
-          margin-top: 1%;
-        }
-
-        .fixing_the_widthing {
-          padding-bottom: 0;
-          margin-bottom: 4%;
-        }
+    /* Connect boxes on smaller screens (mobile view) */
+    @media (max-width: 768px) {
+      .process-step-box:not(:last-child)::after {
+        content: "";
+        position: absolute;
+        width: 2px;
+        height: 30px;
+        background-color: #007bff;
+        bottom: -30px;
+        left: 50%;
+        transform: translateX(-50%);
       }
+    }
 
-      @media (max-width: 550px) {
-        .fixing_the_widthing {
-          padding-bottom: 0;
-        }
-      }
+    /* Style the step numbers */
+    .step-number span {
+      display: inline-block;
+      background-color: #fff;
+      font-size: 1.25rem;
+    }
+  </style>
+  <link rel="stylesheet" href="./beauty/bootstrap/font.css" />
+</head>
 
-      @media (max-width: 489px) {
-        .now_this_wants_paddings {
-          padding-bottom: 15%;
-        }
-      }
+<body>
+  <nav id="home" class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container px-5">
+      <a><img style="width: 100px" src="./assets/prlogo.png" alt="Company Logo" class="me-3" /></a>
 
-      @media (max-width: 460px) {
-        .now_this_wants_paddings {
-          padding-bottom: 32%;
-        }
-      }
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" id="navbarDropdown0" href="#home" role="button" aria-expanded="false">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#our-services" role="button" aria-expanded="false">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#team" role="button">Team</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#testimonials" role="button">Testimonials</a></li>
+          <li class="nav-item"><a class="nav-link" href="./deals.html" role="button">Exclusive Dels</a></li>
+          
+        </ul>
 
-      @media (max-width: 400px) {
-        .now_this_wants_paddings {
-          padding-bottom: 15%;
-        }
-      }
-
-      @media (max-width: 398px) {
-        .now_this_wants_paddings {
-          padding-bottom: 0;
-        }
-      }
-
-      @media (max-width: 425px) {
-        .givingRowingThis {
-          display: flex;
-          flex-direction: column;
-        }
-
-        .now_this_wants_paddings {
-          padding-bottom: 0;
-        }
-      }
-      /* Ensure steps are connected by lines */
-      .process-step-box {
-        position: relative;
-      }
-      /* Connect boxes on smaller screens (mobile view) */
-      @media (max-width: 768px) {
-        .process-step-box:not(:last-child)::after {
-          content: "";
-          position: absolute;
-          width: 2px;
-          height: 30px;
-          background-color: #007bff;
-          bottom: -30px;
-          left: 50%;
-          transform: translateX(-50%);
-        }
-      }
-      /* Style the step numbers */
-      .step-number span {
-        display: inline-block;
-        background-color: #fff;
-        font-size: 1.25rem;
-      }
-    </style>
-    <link rel="stylesheet" href="./beauty/bootstrap/font.css" />
-  </head>
-
-  <body>
-    <nav id="home" class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container px-5">
-        <a
-          ><img
-            style="width: 100px"
-            src="./assets/prlogo.png"
-            alt="Company Logo"
-            class="me-3"
-        /></a>
-
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a
-                class="nav-link"
-                id="navbarDropdown0"
-                href="#home"
-                role="button"
-                aria-expanded="false"
-                >Home</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link"
-                href="#our-services"
-                role="button"
-                aria-expanded="false"
-                >Services</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#team" role="button">Team</a>
-            </li>
-            <li class="nav-item"></li>
-            <a class="nav-link" href="#testimonials" role="button"
-              >Testimonials</a
-            >
-          </ul>
-
-          <!-- CTA Button -->
-          <a
-            class="btn btn-primary"
-            data-bs-toggle="modal"
-            data-bs-target="#contactModal"
-            >Get in touch</a
-          >
+        <!-- CTA Button -->
+        <a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#contactModal">Get in touch</a>
+      </div>
+    </div>
+  </nav>
+  <header class="bg-primary py-5">
+    <div class="container px-5">
+      <div class="row gx-5 align-items-center justify-content-center">
+        <div class="col-lg-8 col-xl-7 col-xxl-6">
+          <div class="my-5 text-xl-start">
+            <h1 class="display-5" style="color: rgb(192, 158, 123)">
+              Welcome to Prism Star Realty
+            </h1>
+            <h3>Your Premier Office Leasing Partner</h3>
+            <br />
+            <p class="fw-normal text-white-80 mb-5">
+              At Prism Star Realty, we specialize in providing flexible,
+              modern office spaces tailored to meet the unique needs of
+              businesses. Whether you’re a startup looking for your first
+              location or an established company seeking to expand, we’re here
+              to help you find the perfect space.
+            </p>
+          </div>
+        </div>
+        <div class="col-xl-5 text-center col-xxl-6 d-xl-block text-center p-0">
+          <img class="img-fluid rounded-3 my-5" src="./assets/banner.jpg" alt="Banner image" />
         </div>
       </div>
-    </nav>
-    <header class="bg-primary py-5">
-      <div class="container px-5">
-        <div class="row gx-5 align-items-center justify-content-center">
-          <div class="col-lg-8 col-xl-7 col-xxl-6">
-            <div class="my-5 text-xl-start">
-              <h1 class="display-5" style="color: rgb(192, 158, 123)">
-                Welcome to Prism Star Realty
-              </h1>
-              <h3>Your Premier Office Leasing Partner</h3>
-              <br />
-              <p class="fw-normal text-white-80 mb-5">
-                At Prism Star Realty, we specialize in providing flexible,
-                modern office spaces tailored to meet the unique needs of
-                businesses. Whether you’re a startup looking for your first
-                location or an established company seeking to expand, we’re here
-                to help you find the perfect space.
+    </div>
+  </header>
+
+  <ul class="nav pt-3 px-5 py-3" style="background-color: #f0f8ff">
+    <li class="nav-item">
+      <a class="nav-link tab" aria-current="page" href="#our-services">Our Services</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link tab active" aria-current="page" href="#wu">Why Us</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link tab" aria-current="page" href="#wwa">Who We Are</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link tab" aria-current="page" href="#ourpro">Our Process</a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link tab" aria-current="page" href="#cu">Contact Us</a>
+    </li>
+  </ul>
+  <section id="our-services" class="py-5">
+    <div class="container px-5 my-5">
+      <div class="row gx-5 justify-content-center">
+        <div class="col-lg-8 col-xl-6">
+          <div class="text-center">
+            <h1 class="fw-bolder">Our Services</h1>
+          </div>
+        </div>
+      </div>
+      <br />
+      <p class="text-center">
+        We provide a complete range of office leasing solutions to meet your
+        specific needs. Here’s how we simplify the leasing process and ensure
+        you get the best space for your business:
+      </p>
+      <br />
+      <div class="row gx-5">
+        <!-- Office Leasing -->
+        <div class="col-lg-4 mb-5">
+          <div class="card h-100 shadow border-0">
+            <div class="card-body p-4 d-flex flex-column">
+              <h3 class="card-title mb-3">Office Leasing</h3>
+              <ul>
+                <li>Dedicated Private Offices</li>
+                <li>
+                  Collaborative Coworking Spaces perfect for freelancers and
+                  startups
+                </li>
+                <li>
+                  <b>Executive Suites </b>: High-end offices with premium
+                  amenities.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Tailored Leasing Solutions -->
+        <div class="col-lg-4 mb-5">
+          <div class="card h-100 shadow border-0">
+            <div class="card-body p-4 d-flex flex-column">
+              <h3 class="card-title mb-3">Tailored Leasing Solutions</h3>
+              <p class="card-text mb-0 flex-grow-1">
+                Every business has unique needs. We customize leasing
+                solutions to align with your goals, budget, and future plans.
               </p>
             </div>
           </div>
-          <div
-            class="col-xl-5 text-center col-xxl-6 d-xl-block text-center p-0"
-          >
-            <img
-              class="img-fluid rounded-3 my-5"
-              src="./assets/banner.jpg"
-              alt="Banner image"
-            />
-          </div>
         </div>
-      </div>
-    </header>
-
-    <ul class="nav pt-3 px-5 py-3" style="background-color: #f0f8ff">
-      <li class="nav-item">
-        <a class="nav-link tab" aria-current="page" href="#our-services"
-          >Our Services</a
-        >
-      </li>
-      <li class="nav-item">
-        <a class="nav-link tab active" aria-current="page" href="#wu">Why Us</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link tab" aria-current="page" href="#wwa">Who We Are</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link tab" aria-current="page" href="#ourpro"
-          >Our Process</a
-        >
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-link tab" aria-current="page" href="#cu">Contact Us</a>
-      </li>
-    </ul>
-    <section id="our-services" class="py-5">
-      <div class="container px-5 my-5">
-        <div class="row gx-5 justify-content-center">
-          <div class="col-lg-8 col-xl-6">
-            <div class="text-center">
-              <h1 class="fw-bolder">Our Services</h1>
+        <!-- Market Analysis and Consulting -->
+        <div class="col-lg-4 mb-5">
+          <div class="card h-100 shadow border-0">
+            <div class="card-body p-4 d-flex flex-column">
+              <h3 class="card-title mb-3">Market Analysis and Consulting</h3>
+              <p class="card-text mb-0 flex-grow-1">
+                Gain valuable insights with our in-depth market analysis. Make
+                informed decisions that keep you ahead of the competition.
+              </p>
             </div>
           </div>
         </div>
-        <br />
-        <p class="text-center">
-          We provide a complete range of office leasing solutions to meet your
-          specific needs. Here’s how we simplify the leasing process and ensure
-          you get the best space for your business:
-        </p>
-        <br />
-        <div class="row gx-5">
-          <!-- Office Leasing -->
-          <div class="col-lg-4 mb-5">
-            <div class="card h-100 shadow border-0">
-              <div class="card-body p-4 d-flex flex-column">
-                <h3 class="card-title mb-3">Office Leasing</h3>
-                <ul>
-                  <li>Dedicated Private Offices</li>
-                  <li>
-                    Collaborative Coworking Spaces perfect for freelancers and
-                    startups
-                  </li>
-                  <li>
-                    <b>Executive Suites </b>: High-end offices with premium
-                    amenities.
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <!-- Tailored Leasing Solutions -->
-          <div class="col-lg-4 mb-5">
-            <div class="card h-100 shadow border-0">
-              <div class="card-body p-4 d-flex flex-column">
-                <h3 class="card-title mb-3">Tailored Leasing Solutions</h3>
-                <p class="card-text mb-0 flex-grow-1">
-                  Every business has unique needs. We customize leasing
-                  solutions to align with your goals, budget, and future plans.
-                </p>
-              </div>
-            </div>
-          </div>
-          <!-- Market Analysis and Consulting -->
-          <div class="col-lg-4 mb-5">
-            <div class="card h-100 shadow border-0">
-              <div class="card-body p-4 d-flex flex-column">
-                <h3 class="card-title mb-3">Market Analysis and Consulting</h3>
-                <p class="card-text mb-0 flex-grow-1">
-                  Gain valuable insights with our in-depth market analysis. Make
-                  informed decisions that keep you ahead of the competition.
-                </p>
-              </div>
-            </div>
-          </div>
-          <!-- Property Management Services -->
-          <div class="col-lg-4 mb-5">
-            <div class="card h-100 shadow border-0">
-              <div class="card-body p-4 d-flex flex-column">
-                <h3 class="card-title mb-3">Property Management Services</h3>
-                <p class="card-text mb-0 flex-grow-1">
-                  From maintenance to tenant relations, we take care of it all,
-                  so you can focus on your business.
-                </p>
-              </div>
-            </div>
-          </div>
-          <!-- Site Selection Assistance -->
-          <div class="col-lg-4 mb-5">
-            <div class="card h-100 shadow border-0">
-              <div class="card-body p-4 d-flex flex-column">
-                <h3 class="card-title mb-3">Site Selection Assistance</h3>
-                <p class="card-text mb-0 flex-grow-1">
-                  We’ll help you evaluate key factors—location, accessibility,
-                  local amenities—so you can choose the perfect office space.
-                </p>
-              </div>
-            </div>
-          </div>
-          <!-- Lease Negotiation -->
-          <div class="col-lg-4 mb-5">
-            <div class="card h-100 shadow border-0">
-              <div class="card-body p-4 d-flex flex-column">
-                <h3 class="card-title mb-3">Lease Negotiation</h3>
-                <p class="card-text mb-0 flex-grow-1">
-                  Our experts negotiate lease agreements that protect your
-                  interests and fit your business strategy.
-                </p>
-              </div>
-            </div>
-          </div>
-          <!-- Relocation Services -->
-          <div class="col-lg-4 mb-5">
-            <div class="card h-100 shadow border-0">
-              <div class="card-body p-4 d-flex flex-column">
-                <h3 class="card-title mb-3">Relocation Services</h3>
-                <p class="card-text mb-0 flex-grow-1">
-                  Moving offices? We handle logistics and setup, ensuring a
-                  smooth transition.
-                </p>
-              </div>
-            </div>
-          </div>
-          <!-- Workspace Design Consultation -->
-          <div class="col-lg-4 mb-5">
-            <div class="card h-100 shadow border-0">
-              <div class="card-body p-4 d-flex flex-column">
-                <h3 class="card-title mb-3">Workspace Design Consultation</h3>
-                <p class="card-text mb-0 flex-grow-1">
-                  Create a workspace that reflects your brand and boosts
-                  productivity with our design services.
-                </p>
-              </div>
+        <!-- Property Management Services -->
+        <div class="col-lg-4 mb-5">
+          <div class="card h-100 shadow border-0">
+            <div class="card-body p-4 d-flex flex-column">
+              <h3 class="card-title mb-3">Property Management Services</h3>
+              <p class="card-text mb-0 flex-grow-1">
+                From maintenance to tenant relations, we take care of it all,
+                so you can focus on your business.
+              </p>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-    <!-- why us-->
-    <!-- why us-->
-    <section id="wu" class="py-1 bg-light" id="scroll-target">
-      <div class="container px-5 my-5">
-        <div class="row gx-5 align-items-start">
-          <div class="col-lg-6">
-            <img
-              class="img-fluid rounded mb-5 mb-lg-0"
-              src="./assets/assets_dg-site/img-dg-site/img coll/pexels-photo-5673488.webp"
-              alt="why us"
-            />
-          </div>
-          <div class="col-lg-6 mt-2">
-            <h2 class="fw-bolder">Why Choose Us?</h2>
-            <hr />
-
-            <ul class="fw-normal mb-0">
-              <li>
-                <strong>Expert Guidance:</strong> Our experienced agents
-                understand the local market and are committed to helping you
-                navigate the leasing process with ease.
-              </li>
-              <br />
-              <li>
-                <strong>Prime Locations:</strong> We feature properties in key
-                business districts, ensuring you’re strategically positioned for
-                success.
-              </li>
-              <br />
-              <li>
-                <strong>Modern Amenities:</strong> Our spaces come equipped with
-                the latest technology and facilities, providing a productive and
-                inspiring environment for your team.
-              </li>
-            </ul>
-            <br />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- About section Who we are   -->
-    <section id="wwa" class="py-1">
-      <div class="container px-5 my-5">
-        <div class="row gx-5 align-items-center">
-          <div class="col-lg-6 order-first order-lg-last">
-            <img
-              class="img-fluid rounded mb-5 mb-lg-0"
-              src="./assets/assets_dg-site/img-dg-site/img coll/pexels-photo-8353800.webp"
-              alt="About Image"
-            />
-          </div>
-          <div class="col-lg-6 mt-2">
-            <h2 class="fw-bolder">Who We Are</h2>
-            <hr />
-            <br />
-            <p class="fw-normal mb-0">
-              Prism Star Realty is a dedicated office leasing company with a
-              passion for helping businesses thrive. Our mission is to connect
-              companies with the ideal office spaces that foster innovation,
-              collaboration, and productivity.
-              <br />
-              <br />
-              With years of experience in the real estate industry, our
-              knowledgeable team is committed to providing exceptional service
-              and personalized solutions.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- nav-content  -->
-    <br />
-    <section class="my-1 mx-6 px-6">
-      <div class="container px-5">
-        <div
-          class="py-5 my-6 w-100 border rounded-pill mt-3 bg-light border rounded-3 shadow-sm"
-        >
-          <div class="text-center">
-            <h2 class="display-6 mb-4">Our Vision</h2>
-            <p class="text-center mb-2 mx-4">
-              We believe that the right workspace can significantly impact a
-              company’s success. At Prism Star Realty, we strive to create
-              environments that inspire creativity and drive results. Our goal
-              is to make the leasing process seamless, allowing you to focus on
-              what truly matters—growing your business.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Our Process Section with Connected Boxes -->
-    <section id="ourpro" class="py-5">
-      <div class="container px-5 my-5">
-        <div class="row justify-content-center mb-5">
-          <div class="col-lg-8 col-xl-6 text-center">
-            <h1 class="fw-bolder">Our Process</h1>
-            <p class="lead">
-              A step-by-step guide to finding your perfect office space.
-            </p>
-          </div>
-        </div>
-
-        <div class="row justify-content-center position-relative">
-          <!-- Step 1: Consultation -->
-          <div class="col-md-3 mb-5 text-center position-relative">
-            <div class="process-step-box card h-100 shadow border-0">
-              <div class="card-body p-4">
-                <div class="step-number mb-3">
-                  <span
-                    class="rounded-circle border fw-bold"
-                    style="padding: 5px 15px"
-                    >1</span
-                  >
-                </div>
-                <h2 class="card-title mb-2">Consultation</h2>
-                <p class="card-text">
-                  We start with a discussion about your needs.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Step 2: Property Tour -->
-          <div class="col-md-3 mb-5 text-center position-relative">
-            <div class="process-step-box card h-100 shadow border-0">
-              <div class="card-body p-4">
-                <div class="step-number mb-3">
-                  <span
-                    class="rounded-circle border fw-bold"
-                    style="padding: 5px 15px"
-                    >2</span
-                  >
-                </div>
-                <h2 class="card-title mb-2">Property Tour</h2>
-                <p class="card-text">
-                  Explore office spaces that meet your criteria.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Step 3: Lease Negotiation -->
-          <div class="col-md-3 mb-5 text-center position-relative">
-            <div class="process-step-box card h-100 shadow border-0">
-              <div class="card-body p-4">
-                <div class="step-number mb-3">
-                  <span
-                    class="rounded-circle border fw-bold"
-                    style="padding: 5px 15px"
-                    >3</span
-                  >
-                </div>
-                <h2 class="card-title mb-2">Lease Negotiation</h2>
-                <p class="card-text">
-                  We handle the fine print, securing the best terms for your
-                  lease.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Step 4: Move-In Support -->
-          <div class="col-md-3 mb-5 text-center position-relative">
-            <div class="process-step-box card h-100 shadow border-0">
-              <div class="card-body p-4">
-                <div class="step-number mb-3">
-                  <span
-                    class="rounded-circle border fw-bold"
-                    style="padding: 5px 15px"
-                    >4</span
-                  >
-                </div>
-                <h2 class="card-title mb-2">Move-In Support</h2>
-                <p class="card-text">
-                  Once you’ve found the perfect space, we ensure a smooth
-                  transition.
-                </p>
-              </div>
+        <!-- Site Selection Assistance -->
+        <div class="col-lg-4 mb-5">
+          <div class="card h-100 shadow border-0">
+            <div class="card-body p-4 d-flex flex-column">
+              <h3 class="card-title mb-3">Site Selection Assistance</h3>
+              <p class="card-text mb-0 flex-grow-1">
+                We’ll help you evaluate key factors—location, accessibility,
+                local amenities—so you can choose the perfect office space.
+              </p>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-
-    <div class="py-5 team3 bg-light" id="team">
-      <div class="container">
-        <div class="row justify-content-center mb-4">
-          <div class="col-md-7 text-center">
-            <h1 class="mb-3">Meet Our Team</h1>
-            <p class="subtitle my-3">
-              At Prism Star Realty, our strength lies in our dedicated team of
-              professionals. With diverse backgrounds and a shared commitment to
-              excellence, we work collaboratively to ensure our clients find the
-              perfect office space for their needs. Get to know the individuals
-              who make up our dynamic team
-            </p>
-          </div>
-        </div>
-        <br />
-        <br />
-        <!-- Meet Our Team Section -->
-        <div class="row justify-content-center">
-          <!-- Himanshu Garkhel -->
-          <div class="col-lg-4 mb-4 mx-5">
-            <div class="card h-100 shadow border-0">
-              <div style="height: 350px; overflow: hidden">
-                <img
-                  src="./assets/Himanshu.jpeg"
-                  alt="Himanshu Garkhel"
-                  class="img-fluid"
-                  style="height: 100%; width: 100%; object-fit: cover"
-                />
-              </div>
-              <div class="card-body p-4 d-flex flex-column">
-                <h2 class="mt-4 font-weight-medium mb-0">Himanshu Garkhel</h2>
-                <h4 class="subtitle my-3">Founder & CEO</h4>
-                <p class="card-text mb-0 flex-grow-1">
-                  With over 13 years of experience in commercial real estate and operations, Mr. Garkhel founded Prism Star Realty with a vision to simplify the office leasing process. A strategic thinker and passionate advocate for businesses, he believes in creating spaces that foster innovation and collaboration.
-                </p>
-              </div>
+        <!-- Lease Negotiation -->
+        <div class="col-lg-4 mb-5">
+          <div class="card h-100 shadow border-0">
+            <div class="card-body p-4 d-flex flex-column">
+              <h3 class="card-title mb-3">Lease Negotiation</h3>
+              <p class="card-text mb-0 flex-grow-1">
+                Our experts negotiate lease agreements that protect your
+                interests and fit your business strategy.
+              </p>
             </div>
           </div>
-
-          <!-- Sommya Agarwal -->
-          <div class="col-lg-4 mb-4 mx-5">
-            <div class="card h-100 shadow border-0">
-              <div style="height: 350px; overflow: hidden">
-                <img
-                  src="./assets/sommya.jpeg"
-                  alt="Sommya Agarwal"
-                  class="img-fluid"
-                  style="height: 100%; width: 100%; object-fit: cover"
-                />
-              </div>
-              <div class="card-body p-4 d-flex flex-column">
-                <h2 class="mt-4 font-weight-medium mb-0">Sommya Agarwal</h2>
-                <p class="my-3">Chief Operating Officer</p>
-                <p class="card-text mb-0 flex-grow-1">
-                  Sommya handles all marketing efforts at Prism Star Realty, from property listings to social media outreach. Her creative strategies help showcase our properties and connect businesses with their ideal office spaces. 
-                </p>
-              </div>
+        </div>
+        <!-- Relocation Services -->
+        <div class="col-lg-4 mb-5">
+          <div class="card h-100 shadow border-0">
+            <div class="card-body p-4 d-flex flex-column">
+              <h3 class="card-title mb-3">Relocation Services</h3>
+              <p class="card-text mb-0 flex-grow-1">
+                Moving offices? We handle logistics and setup, ensuring a
+                smooth transition.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Workspace Design Consultation -->
+        <div class="col-lg-4 mb-5">
+          <div class="card h-100 shadow border-0">
+            <div class="card-body p-4 d-flex flex-column">
+              <h3 class="card-title mb-3">Workspace Design Consultation</h3>
+              <p class="card-text mb-0 flex-grow-1">
+                Create a workspace that reflects your brand and boosts
+                productivity with our design services.
+              </p>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="bg-primary py-5">
-      <div class="container px-5 my-5">
-        <div class="text-center mb-5">
-          <h1 class="fw-bolder">Testimonials</h1>
-          <p class="lead">What Our Clients Say</p>
+  </section>
+  <!-- why us-->
+  <!-- why us-->
+  <section id="wu" class="py-1 bg-light" id="scroll-target">
+    <div class="container px-5 my-5">
+      <div class="row gx-5 align-items-start">
+        <div class="col-lg-6">
+          <img class="img-fluid rounded mb-5 mb-lg-0"
+            src="./assets/assets_dg-site/img-dg-site/img coll/pexels-photo-5673488.webp" alt="why us" />
         </div>
-        <div class="row gx-5 justify-content-center">
-          <!-- Testimonial 1 -->
-          <div class="col-lg-4 mb-4">
-            <div class="card h-100 shadow border-0">
-              <div class="card-body p-4">
-                <p class="card-text">
-                  "Prism Star Realty made our office search incredibly easy.
-                  They listened to our needs and found us the perfect space!"
-                </p>
-                <h5 class="fw-bold">— Bipin Misra.</h5>
-                <p class="text-muted">CEO of Trinity Education</p>
-              </div>
-            </div>
-          </div>
+        <div class="col-lg-6 mt-2">
+          <h2 class="fw-bolder">Why Choose Us?</h2>
+          <hr />
 
-          <!-- Testimonial 2 -->
-          <div class="col-lg-4 mb-4">
-            <div class="card h-100 shadow border-0">
-              <div class="card-body p-4">
-                <p class="card-text">
-                  "The team at Prism Star Realty went above and beyond to help
-                  us negotiate our lease. Their expertise made all the
-                  difference."
-                </p>
-                <h5 class="fw-bold">— Ashish Arora.</h5>
-                <p class="text-muted">Founder of Harrier Transport</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Testimonial 3 -->
-          <div class="col-lg-4 mb-4">
-            <div class="card h-100 shadow border-0">
-              <div class="card-body p-4">
-                <p class="card-text">
-                  "We love our new office! The location is fantastic, and the
-                  amenities are exactly what we were looking for."
-                </p>
-                <h5 class="fw-bold">— Ajay Nandrajog.</h5>
-                <p class="text-muted">Founder at Ankit Rubber Udhyog</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <div
-      class="modal fade"
-      id="contactModal"
-      tabindex="-1"
-      aria-labelledby="contactModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header bg-primary text-white">
-            <h3 class="modal-title" id="contactModalLabel">Contact Us</h3>
-            <button
-              type="button"
-              class="btn-close btn-close-white"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body">
-            <p>* For a better experience, please provide your details</p>
-            <form id="contactForm" onsubmit="return confirmSubmission();">
-              <div class="row">
-                <div class="col-md-6 mb-3">
-                  <label for="name" class="form-label">Name</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="name"
-                    name="name"
-                    required
-                  />
-                </div>
-                <div class="col-md-6 mb-3">
-                  <label for="email" class="form-label">Email address</label>
-                  <input
-                    type="email"
-                    class="form-control"
-                    id="email"
-                    name="email"
-                    required
-                  />
-                </div>
-              </div>
-              <div class="mb-3">
-                <label for="contactNumber" class="form-label"
-                  >Contact Number</label
-                >
-                <input
-                  type="tel"
-                  class="form-control"
-                  id="contactNumber"
-                  name="contactNumber"
-                  required
-                />
-              </div>
-              <div class="mb-3">
-                <label for="address" class="form-label"
-                  >Address (Optional)</label
-                >
-                <input
-                  type="text"
-                  class="form-control"
-                  id="address"
-                  name="address"
-                />
-              </div>
-              <div class="mb-3">
-                <label for="message" class="form-label">Message</label>
-                <textarea
-                  class="form-control"
-                  id="message"
-                  name="message"
-                  rows="3"
-                  required
-                ></textarea>
-              </div>
-              <div class="d-grid gap-2">
-                <button type="submit" class="btn btn-primary">Submit</button>
-              </div>
-            </form>
-          </div>
+          <ul class="fw-normal mb-0">
+            <li>
+              <strong>Expert Guidance:</strong> Our experienced agents
+              understand the local market and are committed to helping you
+              navigate the leasing process with ease.
+            </li>
+            <br />
+            <li>
+              <strong>Prime Locations:</strong> We feature properties in key
+              business districts, ensuring you’re strategically positioned for
+              success.
+            </li>
+            <br />
+            <li>
+              <strong>Modern Amenities:</strong> Our spaces come equipped with
+              the latest technology and facilities, providing a productive and
+              inspiring environment for your team.
+            </li>
+          </ul>
+          <br />
         </div>
       </div>
     </div>
-    <!-- Property Sale & Purchase Section -->
-    <section id="property-sale-purchase" class="py-5 bg-light">
-      <div class="container px-5 my-5">
-        <div class="text-center mb-5">
-          <h1 class="fw-bolder">Property Sale & Purchase</h1>
-          <p class="lead">
-            We also offer a full range of services for buying and selling
-            commercial properties:
+  </section>
+
+  <!-- About section Who we are   -->
+  <section id="wwa" class="py-1">
+    <div class="container px-5 my-5">
+      <div class="row gx-5 align-items-center">
+        <div class="col-lg-6 order-first order-lg-last">
+          <img class="img-fluid rounded mb-5 mb-lg-0"
+            src="./assets/assets_dg-site/img-dg-site/img coll/pexels-photo-8353800.webp" alt="About Image" />
+        </div>
+        <div class="col-lg-6 mt-2">
+          <h2 class="fw-bolder">Who We Are</h2>
+          <hr />
+          <br />
+          <p class="fw-normal mb-0">
+            Prism Star Realty is a dedicated office leasing company with a
+            passion for helping businesses thrive. Our mission is to connect
+            companies with the ideal office spaces that foster innovation,
+            collaboration, and productivity.
+            <br />
+            <br />
+            With years of experience in the real estate industry, our
+            knowledgeable team is committed to providing exceptional service
+            and personalized solutions.
           </p>
         </div>
-
-        <div class="row gx-5">
-          <!-- Selling Your Property -->
-          <div class="col-lg-6 mb-4">
-            <h3>Selling Your Property:</h3>
-            <br />
-            <ul>
-              <li>
-                <strong>Market Valuation:</strong> We assess your property’s
-                value based on market trends.
-              </li>
-              <li>
-                <strong>Marketing Strategy:</strong> We develop targeted
-                marketing campaigns to attract buyers.
-              </li>
-              <li>
-                <strong>Property Staging Advice:</strong> Get expert
-                recommendations to present your property at its best.
-              </li>
-              <li>
-                <strong>Negotiation Expertise:</strong> We ensure you get the
-                best terms.
-              </li>
-            </ul>
-          </div>
-
-          <!-- Purchasing a Property -->
-          <div class="col-lg-6 mb-4">
-            <h3>Purchasing a Property:</h3>
-            <br />
-            <ul>
-              <li>
-                <strong>Property Search:</strong> We’ll find the right
-                commercial space for your needs.
-              </li>
-              <li>
-                <strong>Site Visits:</strong> Tour potential properties to make
-                informed decisions.
-              </li>
-              <li>
-                <strong>Due Diligence Support:</strong> We guide you through
-                every step of the due diligence process.
-              </li>
-              <li>
-                <strong>Financing Assistance:</strong> We help you explore
-                financing options that fit your budget.
-              </li>
-            </ul>
-          </div>
+      </div>
+    </div>
+  </section>
+  <!-- nav-content  -->
+  <br />
+  <section class="my-1 mx-6 px-6">
+    <div class="container px-5">
+      <div class="py-5 my-6 w-100 border rounded-pill mt-3 bg-light border rounded-3 shadow-sm">
+        <div class="text-center">
+          <h2 class="display-6 mb-4">Our Vision</h2>
+          <p class="text-center mb-2 mx-4">
+            We believe that the right workspace can significantly impact a
+            company’s success. At Prism Star Realty, we strive to create
+            environments that inspire creativity and drive results. Our goal
+            is to make the leasing process seamless, allowing you to focus on
+            what truly matters—growing your business.
+          </p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="template-ui-section-footer-option1-sample">
-      <footer
-        class="text-center text-lg-start text-dark"
-        style="background-color: #eceff1"
-      >
-        <!-- Section: Links  -->
-        <section class="pt-3">
-          <div class="container text-center text-md-start mt-5">
-            <div class="row mt-3">
-              <!-- Grid column -->
-              <div class="col-md-4 col-lg-4 col-xl-3 mx-auto mb-4">
-                <h6 class="text-uppercase fw-bold">Prism Star</h6>
-                <hr
-                  class="mb-4 mt-0 d-inline-block mx-auto"
-                  style="width: 60px; background-color: #7c4dff; height: 2px"
-                />
-
-                <p><i class="fas fa-home mr-3"></i> Gurgoan</p>
-                <p>
-                  <i class="fas fa-envelope mr-3"></i> himanshu@prismstar.in
-                </p>
-                <p>
-                  <i class="fas fa-phone mr-3"></i> +91-8533001627,
-                  +91-8076010030
-                </p>
-              </div>
-
-              <!-- Quick Links Column -->
-              <div class="col-md-4 col-lg-2 col-xl-2 mx-auto mb-4">
-                <h6 class="text-uppercase fw-bold">Quick Links</h6>
-                <hr
-                  class="mb-4 mt-0 d-inline-block mx-auto"
-                  style="width: 60px; background-color: #7c4dff; height: 2px"
-                />
-                <p>
-                  <a href="#home" class="text-dark no-underline">Home</a>
-                </p>
-                <p>
-                  <a href="#our-services" class="text-dark no-underline"
-                    >Our Services</a
-                  >
-                </p>
-                <p>
-                  <a href="#wu" class="text-dark no-underline">Why Us</a>
-                </p>
-                <p>
-                  <a href="#wwa" class="text-dark no-underline">Who We Are</a>
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <div class="row align-items-center mx-2 mt-5">
-          <div
-            class="col-12 col-md-6 d-flex justify-content-center justify-content-md-start align-items-center mb-3 mb-md-0"
-          >
-            <a href="https://prismstar.in/">
-              <img
-                style="width: 100px"
-                src="./assets/prlogo.png"
-                alt="Company Logo"
-                class="me-3"
-              />
-            </a>
-            <b class="mx-3">|</b>
-            <div>
-              <h3 class="mb-0 fw-bold">
-                Elevate Your Business with the Right Space
-              </h3>
-            </div>
-          </div>
-          <div
-            class="col-12 col-md-6 d-flex justify-content-center justify-content-md-end my-4"
-          >
-            
-           
-           
-            <a
-              href="https://www.linkedin.com/in/himanshu-garkhel-bb376438/"
-              class="text-dark me-3" target="_blank"
-              ><i class="fab fa-linkedin fa-2x"></i
-            ></a>
-          </div>
+  <!-- Our Process Section with Connected Boxes -->
+  <section id="ourpro" class="py-5">
+    <div class="container px-5 my-5">
+      <div class="row justify-content-center mb-5">
+        <div class="col-lg-8 col-xl-6 text-center">
+          <h1 class="fw-bolder">Our Process</h1>
+          <p class="lead">
+            A step-by-step guide to finding your perfect office space.
+          </p>
         </div>
+      </div>
 
-        <!-- Copyright -->
-        <div class="text-center p-3">
-          ©2024 Prism Star Realty:
-          <a class="text-dark text-decoration-none text-xs" href=""
-            >All Rights Reserved</a
-          >
-        </div>
-
-        <!-- Disclaimer Section -->
-        <section class="mb-5">
-          <div class="row d-flex justify-content-center mw-100 px-3 m-auto">
-            <div>
-              <p style="font-size: 14px">
-                <b>Disclaimer:</b> All information provided on this website is
-                for informational purposes only and does not constitute legal or
-                financial advice. Always consult with a qualified professional
-                regarding your specific situation.
+      <div class="row justify-content-center position-relative">
+        <!-- Step 1: Consultation -->
+        <div class="col-md-3 mb-5 text-center position-relative">
+          <div class="process-step-box card h-100 shadow border-0">
+            <div class="card-body p-4">
+              <div class="step-number mb-3">
+                <span class="rounded-circle border fw-bold" style="padding: 5px 15px">1</span>
+              </div>
+              <h2 class="card-title mb-2">Consultation</h2>
+              <p class="card-text">
+                We start with a discussion about your needs.
               </p>
             </div>
           </div>
-        </section>
-      </footer>
-    </section>
+        </div>
 
-    <script src="./js/contact-us-form.js"></script>
-    <script src="./js/product.js"></script>
-    <script src="./js/components/navbar.js"></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
-    <script>
-      function confirmSubmission() {
-        const name = document.getElementById("name").value;
-        const email = document.getElementById("email").value;
-        const contactNumber = document.getElementById("contactNumber").value;
-        const address = document.getElementById("address").value;
-        const message = document.getElementById("message").value;
+        <!-- Step 2: Property Tour -->
+        <div class="col-md-3 mb-5 text-center position-relative">
+          <div class="process-step-box card h-100 shadow border-0">
+            <div class="card-body p-4">
+              <div class="step-number mb-3">
+                <span class="rounded-circle border fw-bold" style="padding: 5px 15px">2</span>
+              </div>
+              <h2 class="card-title mb-2">Property Tour</h2>
+              <p class="card-text">
+                Explore office spaces that meet your criteria.
+              </p>
+            </div>
+          </div>
+        </div>
 
-        const mailtoLink = `mailto:himanshu@prismstar.in?cc=prismstarggn@gmail.com&subject=Contact Form Submission from Real Estate Website&body=Name: ${name}%0AEmail: ${email}%0AContact Number: ${contactNumber}%0AAddress: ${
-          address || "N/A"
+        <!-- Step 3: Lease Negotiation -->
+        <div class="col-md-3 mb-5 text-center position-relative">
+          <div class="process-step-box card h-100 shadow border-0">
+            <div class="card-body p-4">
+              <div class="step-number mb-3">
+                <span class="rounded-circle border fw-bold" style="padding: 5px 15px">3</span>
+              </div>
+              <h2 class="card-title mb-2">Lease Negotiation</h2>
+              <p class="card-text">
+                We handle the fine print, securing the best terms for your
+                lease.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 4: Move-In Support -->
+        <div class="col-md-3 mb-5 text-center position-relative">
+          <div class="process-step-box card h-100 shadow border-0">
+            <div class="card-body p-4">
+              <div class="step-number mb-3">
+                <span class="rounded-circle border fw-bold" style="padding: 5px 15px">4</span>
+              </div>
+              <h2 class="card-title mb-2">Move-In Support</h2>
+              <p class="card-text">
+                Once you’ve found the perfect space, we ensure a smooth
+                transition.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="py-5 team3 bg-light" id="team">
+    <div class="container">
+      <div class="row justify-content-center mb-4">
+        <div class="col-md-7 text-center">
+          <h1 class="mb-3">Meet Our Team</h1>
+          <p class="subtitle my-3">
+            At Prism Star Realty, our strength lies in our dedicated team of
+            professionals. With diverse backgrounds and a shared commitment to
+            excellence, we work collaboratively to ensure our clients find the
+            perfect office space for their needs. Get to know the individuals
+            who make up our dynamic team
+          </p>
+        </div>
+      </div>
+      <br />
+      <br />
+      <!-- Meet Our Team Section -->
+      <div class="row justify-content-center">
+        <!-- Himanshu Garkhel -->
+        <div class="col-lg-4 mb-4 mx-5">
+          <div class="card h-100 shadow border-0">
+            <div style="height: 350px; overflow: hidden">
+              <img src="./assets/Himanshu.jpeg" alt="Himanshu Garkhel" class="img-fluid"
+                style="height: 100%; width: 100%; object-fit: cover" />
+            </div>
+            <div class="card-body p-4 d-flex flex-column">
+              <h2 class="mt-4 font-weight-medium mb-0">Himanshu Garkhel</h2>
+              <h4 class="subtitle my-3">Founder & CEO</h4>
+              <p class="card-text mb-0 flex-grow-1">
+                With over 13 years of experience in commercial real estate and operations, Mr. Garkhel founded Prism
+                Star Realty with a vision to simplify the office leasing process. A strategic thinker and passionate
+                advocate for businesses, he believes in creating spaces that foster innovation and collaboration.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sommya Agarwal -->
+        <div class="col-lg-4 mb-4 mx-5">
+          <div class="card h-100 shadow border-0">
+            <div style="height: 350px; overflow: hidden">
+              <img src="./assets/sommya.jpeg" alt="Sommya Agarwal" class="img-fluid"
+                style="height: 100%; width: 100%; object-fit: cover" />
+            </div>
+            <div class="card-body p-4 d-flex flex-column">
+              <h2 class="mt-4 font-weight-medium mb-0">Sommya Agarwal</h2>
+              <p class="my-3">Chief Operating Officer</p>
+              <p class="card-text mb-0 flex-grow-1">
+                Sommya handles all marketing efforts at Prism Star Realty, from property listings to social media
+                outreach. Her creative strategies help showcase our properties and connect businesses with their ideal
+                office spaces.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="bg-primary py-5">
+    <div class="container px-5 my-5">
+      <div class="text-center mb-5">
+        <h1 class="fw-bolder">Testimonials</h1>
+        <p class="lead">What Our Clients Say</p>
+      </div>
+      <div class="row gx-5 justify-content-center">
+        <!-- Testimonial 1 -->
+        <div class="col-lg-4 mb-4">
+          <div class="card h-100 shadow border-0">
+            <div class="card-body p-4">
+              <p class="card-text">
+                "Prism Star Realty made our office search incredibly easy.
+                They listened to our needs and found us the perfect space!"
+              </p>
+              <h5 class="fw-bold">— Bipin Misra.</h5>
+              <p class="text-muted">CEO of Trinity Education</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="col-lg-4 mb-4">
+          <div class="card h-100 shadow border-0">
+            <div class="card-body p-4">
+              <p class="card-text">
+                "The team at Prism Star Realty went above and beyond to help
+                us negotiate our lease. Their expertise made all the
+                difference."
+              </p>
+              <h5 class="fw-bold">— Ashish Arora.</h5>
+              <p class="text-muted">Founder of Harrier Transport</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="col-lg-4 mb-4">
+          <div class="card h-100 shadow border-0">
+            <div class="card-body p-4">
+              <p class="card-text">
+                "We love our new office! The location is fantastic, and the
+                amenities are exactly what we were looking for."
+              </p>
+              <h5 class="fw-bold">— Ajay Nandrajog.</h5>
+              <p class="text-muted">Founder at Ankit Rubber Udhyog</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-primary text-white">
+          <h3 class="modal-title" id="contactModalLabel">Contact Us</h3>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>* For a better experience, please provide your details</p>
+          <form id="contactForm" onsubmit="return confirmSubmission();">
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" name="name" required />
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="email" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="email" name="email" required />
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="contactNumber" class="form-label">Contact Number</label>
+              <input type="tel" class="form-control" id="contactNumber" name="contactNumber" required />
+            </div>
+            <div class="mb-3">
+              <label for="address" class="form-label">Address (Optional)</label>
+              <input type="text" class="form-control" id="address" name="address" />
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Message</label>
+              <textarea class="form-control" id="message" name="message" rows="3" required></textarea>
+            </div>
+            <div class="d-grid gap-2">
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Property Sale & Purchase Section -->
+  <section id="property-sale-purchase" class="py-5 bg-light">
+    <div class="container px-5 my-5">
+      <div class="text-center mb-5">
+        <h1 class="fw-bolder">Property Sale & Purchase</h1>
+        <p class="lead">
+          We also offer a full range of services for buying and selling
+          commercial properties:
+        </p>
+      </div>
+
+      <div class="row gx-5">
+        <!-- Selling Your Property -->
+        <div class="col-lg-6 mb-4">
+          <h3>Selling Your Property:</h3>
+          <br />
+          <ul>
+            <li>
+              <strong>Market Valuation:</strong> We assess your property’s
+              value based on market trends.
+            </li>
+            <li>
+              <strong>Marketing Strategy:</strong> We develop targeted
+              marketing campaigns to attract buyers.
+            </li>
+            <li>
+              <strong>Property Staging Advice:</strong> Get expert
+              recommendations to present your property at its best.
+            </li>
+            <li>
+              <strong>Negotiation Expertise:</strong> We ensure you get the
+              best terms.
+            </li>
+          </ul>
+        </div>
+
+        <!-- Purchasing a Property -->
+        <div class="col-lg-6 mb-4">
+          <h3>Purchasing a Property:</h3>
+          <br />
+          <ul>
+            <li>
+              <strong>Property Search:</strong> We’ll find the right
+              commercial space for your needs.
+            </li>
+            <li>
+              <strong>Site Visits:</strong> Tour potential properties to make
+              informed decisions.
+            </li>
+            <li>
+              <strong>Due Diligence Support:</strong> We guide you through
+              every step of the due diligence process.
+            </li>
+            <li>
+              <strong>Financing Assistance:</strong> We help you explore
+              financing options that fit your budget.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="template-ui-section-footer-option1-sample">
+    <footer class="text-center text-lg-start text-dark" style="background-color: #eceff1">
+      <!-- Section: Links  -->
+      <section class="pt-3">
+        <div class="container text-center text-md-start mt-5">
+          <div class="row mt-3">
+            <!-- Grid column -->
+            <div class="col-md-4 col-lg-4 col-xl-3 mx-auto mb-4">
+              <h6 class="text-uppercase fw-bold">Prism Star</h6>
+              <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                style="width: 60px; background-color: #7c4dff; height: 2px" />
+
+              <p><i class="fas fa-home mr-3"></i> Gurgoan</p>
+              <p>
+                <i class="fas fa-envelope mr-3"></i> himanshu@prismstar.in
+              </p>
+              <p>
+                <i class="fas fa-phone mr-3"></i> +91-8533001627,
+                +91-8076010030
+              </p>
+            </div>
+
+            <!-- Quick Links Column -->
+            <div class="col-md-4 col-lg-2 col-xl-2 mx-auto mb-4">
+              <h6 class="text-uppercase fw-bold">Quick Links</h6>
+              <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                style="width: 60px; background-color: #7c4dff; height: 2px" />
+              <p>
+                <a href="#home" class="text-dark no-underline">Home</a>
+              </p>
+              <p>
+                <a href="#our-services" class="text-dark no-underline">Our Services</a>
+              </p>
+              <p>
+                <a href="#wu" class="text-dark no-underline">Why Us</a>
+              </p>
+              <p>
+                <a href="#wwa" class="text-dark no-underline">Who We Are</a>
+              </p>
+              <p>
+                <a href="./deals.html" class="text-dark no-underline">Exclusive Deals</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="row align-items-center mx-2 mt-5">
+        <div
+          class="col-12 col-md-6 d-flex justify-content-center justify-content-md-start align-items-center mb-3 mb-md-0">
+          <a href="https://prismstar.in/">
+            <img style="width: 100px" src="./assets/prlogo.png" alt="Company Logo" class="me-3" />
+          </a>
+          <b class="mx-3">|</b>
+          <div>
+            <h3 class="mb-0 fw-bold">
+              Elevate Your Business with the Right Space
+            </h3>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 d-flex justify-content-center justify-content-md-end my-4">
+
+
+
+          <a href="https://www.linkedin.com/in/himanshu-garkhel-bb376438/" class="text-dark me-3" target="_blank"><i
+              class="fab fa-linkedin fa-2x"></i></a>
+        </div>
+      </div>
+
+      <!-- Copyright -->
+      <div class="text-center p-3">
+        ©2024 Prism Star Realty:
+        <a class="text-dark text-decoration-none text-xs" href="">All Rights Reserved</a>
+      </div>
+
+      <!-- Disclaimer Section -->
+      <section class="mb-5">
+        <div class="row d-flex justify-content-center mw-100 px-3 m-auto">
+          <div>
+            <p style="font-size: 14px">
+              <b>Disclaimer:</b> All information provided on this website is
+              for informational purposes only and does not constitute legal or
+              financial advice. Always consult with a qualified professional
+              regarding your specific situation.
+            </p>
+          </div>
+        </div>
+      </section>
+    </footer>
+  </section>
+
+  <script src="./js/contact-us-form.js"></script>
+  <script src="./js/product.js"></script>
+  <script src="./js/components/navbar.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script>
+    function confirmSubmission() {
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const contactNumber = document.getElementById("contactNumber").value;
+      const address = document.getElementById("address").value;
+      const message = document.getElementById("message").value;
+
+      const mailtoLink = `mailto:himanshu@prismstar.in?cc=prismstarggn@gmail.com&subject=Contact Form Submission from Real Estate Website&body=Name: ${name}%0AEmail: ${email}%0AContact Number: ${contactNumber}%0AAddress: ${address || "N/A"
         }%0AMessage: ${message}`;
 
-        // Open the mail client with the generated mailto link
-        window.location.href = mailtoLink;
+      // Open the mail client with the generated mailto link
+      window.location.href = mailtoLink;
 
-        // Alert the user
-        alert(
-          "Your email client will open to send the message. Please check and send the email."
-        );
+      // Alert the user
+      alert(
+        "Your email client will open to send the message. Please check and send the email."
+      );
 
-        return false; // Prevent the form from submitting normally
-      }
-    </script>
-  </body>
+      return false; // Prevent the form from submitting normally
+    }
+  </script>
+</body>
+
 </html>
